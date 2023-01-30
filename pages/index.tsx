@@ -1,10 +1,9 @@
-import IntroTemplate from 'intro-template'
+import Navbar from '../sanity/components/Navbar'
 
 export default function IndexPage() {
   return (
     <>
-      {/* Start something new 💖 */}
-      <IntroTemplate />
+      <Navbar />
     </>
   )
 }
