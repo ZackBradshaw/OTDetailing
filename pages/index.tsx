@@ -1,12 +1,14 @@
 import Navbar from '../sanity/components/Navbar'
 import Layout from '../sanity/components/Layout'
 import Hero from '../sanity/components/Hero'
+import Services from '../sanity/components/Services'
 
 export default function IndexPage() {
   return (
     <>
       <Layout>
         <Hero />
+        <Services />
       </Layout>
     </>
   )
