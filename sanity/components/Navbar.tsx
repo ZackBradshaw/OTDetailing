@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
    <div>
-      <div className="navbar bg-base-100 w-screen flex justify-center">
+      <div className="navbar bg-base-100  flex justify-center">
         <div className="max-w-screen-2xl w-full flex justify-between">
         <div className="navbar-start w-fit">
           <div className="dropdown">

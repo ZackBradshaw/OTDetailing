@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
       <footer className='footer p-10 bg-neutral text-neutral-content flex justify-center'>
-        <div className=' flex justify-between w-full max-w-screen-2xl'>
+        <div className=' flex justify-between w-full R w-screen-2xl'>
         <div>
           <svg width='50' height='50' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fillRule='evenodd'
                clipRule='evenodd' className='fill-current'>
