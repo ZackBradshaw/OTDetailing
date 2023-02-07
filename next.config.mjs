@@ -5,7 +5,8 @@ const config = {
   },
   images: {
   domains: [
-  'https://picsum.photos/' 
+  'https://picsum.photos/',
+  'https://images.unsplash.com/photos/',
   ],
 }
 }
