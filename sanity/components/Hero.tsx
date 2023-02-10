@@ -4,8 +4,8 @@ const Hero = () => {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <h1 className="mb-5 text-5xl font-bold">Our Mission</h1>
+      <p className="mb-5">is to provide the best car detailing services with exceptional customer service. Using the latest tools and techniques, we aim to bring out the best in every vehicle. We strive for convenience and professionalism, building lasting relationships based on trust and quality results.</p>
       <button className="btn btn-primary">Get Started</button>
     </div>
   </div>
