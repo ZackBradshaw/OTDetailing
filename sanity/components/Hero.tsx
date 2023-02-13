@@ -6,7 +6,6 @@ const Hero = () => {
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Our Mission</h1>
       <p className="mb-5">is to provide the best car detailing services with exceptional customer service. Using the latest tools and techniques, we aim to bring out the best in every vehicle. We strive for convenience and professionalism, building lasting relationships based on trust and quality results.</p>
-      <button className="btn btn-primary">Get Started</button>
     </div>
   </div>
 </div>
