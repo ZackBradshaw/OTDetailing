@@ -8,7 +8,6 @@ module.exports = {
     './intro-template/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    ...theme,
     // Overriding fontFamily to use @next/font loaded families
     fontFamily: {
       mono: 'var(--font-mono)',
@@ -19,5 +18,8 @@ module.exports = {
   plugins: [require('@tailwindcss/typography')],
   plugins: [require('daisyui')],
 
+  daisyui: {
+    themes: ['corporate', 'business'],
+  },
   important: true,
 }
