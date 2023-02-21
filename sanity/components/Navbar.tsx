@@ -49,7 +49,7 @@ const Navbar = () => {
                 <span className="badge">New</span>
               </a>
             </li>
-            <li><a>Settings</a></li>
+            <li><a href='https://dashboard.stripe.com/test/settings/billing/portal'>Settings</a></li>
             <li><a>Logout</a></li>
           </ul>
           </div>
