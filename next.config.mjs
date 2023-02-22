@@ -7,6 +7,7 @@ const config = {
   domains: [
   'https://picsum.photos/',
   'https://images.unsplash.com/photos/',
+  'http://www.w3.org/'
   ],
 }
 }
