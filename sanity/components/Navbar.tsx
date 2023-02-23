@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="w-10 rounded-full">
               <img src="https://picsum.photos/200/300" />
             </div>
-          </label>
+           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li>
               <a 
