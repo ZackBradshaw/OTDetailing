@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   
-    const [theme, setTheme] = React.useState('light');
+    const [theme, setTheme] = React.useState('corporate');
     const toggleTheme = () => {
       setTheme(theme === 'business' ? 'corporate' : 'business');
     };
@@ -37,11 +37,11 @@ const Navbar = () => {
         </div>
         <div> 
           <div className="dropdown dropdown-end"> 
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               <img src="https://picsum.photos/200/300" />
             </div>
-           </label>
+           </div>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li>
               <a 
