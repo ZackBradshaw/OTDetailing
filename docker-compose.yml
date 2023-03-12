@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mariadb:10.3
+    ports:
+      - "33062:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootPassword
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=otd
+      - MYSQL_PASSWORD=UserPassword
+    volumes:
+      - ./mysql:/var/lib/mysql-ot-detailing
