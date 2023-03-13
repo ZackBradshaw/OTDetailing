@@ -47,12 +47,10 @@ const Navbar = () => {
               <a 
                 className="justify-between"
                 href='https://billing.stripe.com/p/login/test_fZedRD2zadofc243cc'>
-                Login 
+                Customer Portal
                 <span className="badge">New</span>
               </a>
             </li>
-            <li><a >Settings</a></li>
-            <li><a>Logout</a></li>
           </ul>
           </div>
             {/*<label className="swap swap-rotate">*/}
