@@ -8,7 +8,7 @@ const Navbar = () => {
         <a className="btn btn-ghost normal-case text-secondary text-xl">OT Detailing</a>
       </div> 
           <div className="dropdown dropdown-end flex-end"> 
-          <div tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div tabIndex={1} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               <img src="https://picsum.photos/200/300" />
             </div>
@@ -19,9 +19,16 @@ const Navbar = () => {
                 className="justify-between"
                 href='https://billing.stripe.com/p/login/test_fZedRD2zadofc243cc'>
                 Customer Portal
-                <span className="badge">New</span>
               </a>
             </li>
+            <li>
+              <a
+                className="justify-between"
+                href='https://billing.stripe.com/p/login/test_fZedRD2zadofc243cc'>
+                Login
+              </a>
+            </li>
+            
           </ul>
           </div> 
     </div>
