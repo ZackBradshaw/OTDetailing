@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="dropdown dropdown-end flex-end"> 
           <div tabIndex={1} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img src="https://picsum.photos/200/300" />
+              <img src="/User-Profile-Icon-9mces.svg" />
             </div>
            </div>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
