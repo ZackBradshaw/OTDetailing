@@ -2,10 +2,10 @@ import React from 'react'
 
 const Navbar = () => { 
   return (
-<div className="flex justify-center w-full bg-base-100 text-secondary"> 
+<div className="flex justify-center w-full bg-base-100 text-primary"> 
   <div className="navbar max-w-screen-2xl bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-secondary text-xl">OT Detailing</a>
+        <a className="btn btn-ghost normal-case text-primary text-xl">OT Detailing</a>
       </div> 
           <div className="dropdown dropdown-end flex-end"> 
           <div tabIndex={1} className="btn btn-ghost btn-circle avatar">
