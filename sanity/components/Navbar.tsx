@@ -25,7 +25,7 @@ const Navbar = () => {
               <a
                 className="justify-between"
                 href='https://billing.stripe.com/p/login/test_fZedRD2zadofc243cc'>
-                Login
+                Schedule 
               </a>
             </li>
             
