@@ -2,6 +2,7 @@ import Navbar from '../sanity/components/Navbar'
 import Layout from '../sanity/components/Layout'
 import Hero from '../sanity/components/Hero'
 import Services from '../sanity/components/Services'
+import CalendlyInbed from '../sanity/components/CalendlyInbed'
 
 export default function IndexPage() {
   return (
@@ -9,6 +10,7 @@ export default function IndexPage() {
       <Layout>
         <Hero />
         <Services />
+        <CalendlyInbed />
       </Layout>
     </>
   )
