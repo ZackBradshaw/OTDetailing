@@ -1,8 +1,8 @@
-import Navbar from '../sanity/components/Navbar'
 import Layout from '../sanity/components/Layout'
 import Hero from '../sanity/components/Hero'
 import Services from '../sanity/components/Services'
 import CalendlyInbed from '../sanity/components/CalendlyInbed'
+import Carousel from '../sanity/components/Carousel'
 
 export default function IndexPage() {
   return (
@@ -11,6 +11,7 @@ export default function IndexPage() {
         <Hero />
         <Services />
         <CalendlyInbed /> 
+        <Carousel />
       </Layout>
     </>
   )
