@@ -15,14 +15,14 @@ const CalendlyEmbed = () => {
 
   return (
     <div>
-      <div
-        className="calendly-inline-widget min-w-[320px=] h-[630px]"
-        data-url="https://calendly.com/zackzbradshaw"
-      ></div>
       <iframe width='100%' height='750px'
               src='https://zackbradshaw.zohobookings.com/portal-embed#/customer/4504693000000031018' frameBorder='0'
-              allowFullScreen=''> 
+              allowFullScreen=''>
       </iframe>
+      <div
+        className="calendly-inline-widget  min-w-[320px=] h-[630px]"
+        data-url="https://calendly.com/zackzbradshaw"
+      ></div>
     </div>
   );
 };
