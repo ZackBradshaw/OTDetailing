@@ -4,21 +4,16 @@ import Link from 'next/link'
 const Card = ({  title, description, link  }) => {
   
   return (
-    <div className="card w-96 text-secondary h-[300px] w-[300px] bg-base-100 shadow-xl">
-      <figure className="px-10 pt-10">
-      </figure>
-      <div className="card-body items-center text-center">
-        <h2 className="card-title">{title}</h2>
-        <p>{description}</p>
-        <div className="card-actions">
-          <button className="btn btn-primary">
-            <Link href={link}>
-              Buy Now
-            </Link>
-          </button>
-        </div>
-      </div>
+<div className="card w-96 glass">
+  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
+  <div className="card-body">
+    <h2 className="card-title">Life hack</h2>
+    <p>How to park your car at your garage?</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Learn now!</button>
     </div>
+  </div>
+</div>
   );
 };
 
