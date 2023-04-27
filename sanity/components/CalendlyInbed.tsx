@@ -22,9 +22,11 @@ const CalendlyEmbed = () => {
       <div
         className="calendly-inline-widget  min-w-[320px=] h-[630px]"
         data-url="https://calendly.com/zackzbradshaw"
+        w
       ></div>
     </div>
   );
+  
 };
 
 export default CalendlyEmbed;
