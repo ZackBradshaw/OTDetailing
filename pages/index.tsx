@@ -9,10 +9,10 @@ export default function IndexPage() {
   return (
     <>
       <Layout>
-        <Hero />
+        {/*<Hero />*/}
+        <Carousel />
         <Services />
         <CalendlyInbed />
-        <Carousel />
       </Layout>
     </>
   )
