@@ -12,7 +12,6 @@ export default function IndexPage() {
         <Hero />
         <Services />
         <CalendlyInbed />
-        <Card />
         <Carousel />
       </Layout>
     </>
