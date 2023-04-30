@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Card = ({  title, description, link  }) => {
   
   return (
-<div className="card glass rounded-sm ">
+<div className="card glass bg-opacity-30 rounded-sm ">
     <a href={link}>
         <div className="card-body w-[20rem] ">
           <h2 className='card-title'>{title}</h2>
