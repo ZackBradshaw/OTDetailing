@@ -21,7 +21,7 @@ const BookingComponent: React.FC = () => {
         bottom: 0,
         left: 0,
         width: '100%',
-        height: '20%',
+        height: '80%',
         zIndex: 1,
         opacity: 0 // you can set this to 0 to make the button invisible
       }}>
