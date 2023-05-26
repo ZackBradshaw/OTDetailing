@@ -7,7 +7,7 @@ export default function Document() {
       <Head >
       <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
       </Head>
-      <body className="bg-white text-black dark:bg-black dark:text-white">
+      <body className="bg-white text-black dark:bg-black dark:text-white ">
         <Main />
         <NextScript />
       </body>
