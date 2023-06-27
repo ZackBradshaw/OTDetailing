@@ -9,13 +9,14 @@ declare global {
     }
   }
 }
+
 function Services() {
-  return ( 
-  <stripe-pricing-table 
-    className="w-full"
-    pricing-table-id="prctbl_1McG2LHRwxuUHV7L7a6UQmgO"
-    publishable-key="pk_test_51MTwkEHRwxuUHV7LchXa0p96qgiuDwEQfU23T2hu0YfaQ3f94PKifZWN1HzYEwGeWgYyaaGsYtfHrL9aLA0HolGd00whNNDeDi">
-  </stripe-pricing-table> 
+  return (
+    <stripe-pricing-table
+      className='w-full'
+      pricing-table-id='prctbl_1NNiMMHRwxuUHV7LnsFg0qqe'
+      publishable-key='pk_live_51MTwkEHRwxuUHV7L7aIHPLFiZIHxo2MZyqegzWU7W6GSGBXyvlaZMumTaMT1rpJUDl0ptlNge93IyGmiJetYn2ue00KL94kiCA'>
+    </stripe-pricing-table>
   )
 }
 
