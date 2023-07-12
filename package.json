@@ -19,6 +19,7 @@
     "@sanity/vision": "^3.1.4",
     "@tailwindcss/typography": "^0.5.8",
     "daisyui": "^2.49.0",
+    "image-comparison": "^2.0.4",
     "image-comparison-component": "^0.0.5",
     "next": "^13.1.1",
     "next-sanity": "^3.1.9",
