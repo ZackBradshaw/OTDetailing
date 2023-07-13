@@ -4,7 +4,7 @@ import Carousel from '../sanity/components/Carousel'
 import BookingComponent from '../sanity/components/BookingComponent'
 import ServiceCards from '../sanity/components/ServiceCards'
 import DetailingServices from '../sanity/components/DetailingServices'
-import { ImageComparison } from 'image-comparison-component'
+import  ImageComparison  from 'image-comparison-component/image-comparison.js'
 import React from 'react'
 
 export default function IndexPage() {
