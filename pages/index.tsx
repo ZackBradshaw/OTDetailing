@@ -9,10 +9,6 @@ import dynamic from 'next/dynamic'
 import React from 'react'
 
 export default function IndexPage() {
-  const ImageComparison = dynamic(
-    () => import('react-image-comparison-slider'),
-    { ssr: false }
-  )
   return (
     <>
       <Layout>
