@@ -19,6 +19,7 @@ export default function IndexPage() {
           <BookingComponent />
         </div>
         in the decription field fill in interior services
+        <img src="Steps.png" />
         <ServiceCards
           image={'https://images.unsplash.com/photo-1527581849771-416a9d62308e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'}
           service={<DetailingServices serviceType={'exterior'} />} />
@@ -28,7 +29,7 @@ export default function IndexPage() {
         itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image one" />}
         itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image two" />}
         />
-        <CarDetailingFlowChart />
+        {/*<CarDetailingFlowChart />*/}
       </Layout>
     </>
   )
