@@ -7,6 +7,7 @@ import DetailingServices from '../sanity/components/DetailingServices'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import dynamic from 'next/dynamic'
 import React from 'react'
+import CarDetailingFlowChart from '../sanity/components/CarDetailingFlowChart'
 
 export default function IndexPage() {
   return (
@@ -27,6 +28,7 @@ export default function IndexPage() {
         itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image one" />}
         itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image two" />}
         />
+        <CarDetailingFlowChart />
       </Layout>
     </>
   )
