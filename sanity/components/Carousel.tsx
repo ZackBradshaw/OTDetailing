@@ -23,9 +23,10 @@ export default function Carousel({ items }) {
       {items.map((item, index) => (
         <div id={`slide${index+1}`} className={`carousel-item relative w-full ${currentSlide === index+1 ? 'active' : ''}`}>
           {item}
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href={`#slide${index === 0 ? items.length : index}`} className="btn btn-circle">❮</a> 
-            <a href={`#slide${index+2 > items.length ? 1 : index+2}`} className="btn btn-circle">❯</a>
+          <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2">
+            {items.map((_, i) => (
+              <a href={`#slide${i+1}`} className={`btn btn-circle ${currentSlide === i+1 ? 'active' : ''}`}>{i+1}</a>
+            ))}
           </div>
         </div>
       ))}
