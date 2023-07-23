@@ -1,5 +1,5 @@
-import { Carousel } from 'daisyUI';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import Carousel from './Carousel'
 
 export default function BeforeAfterCarousel() {
   return (
