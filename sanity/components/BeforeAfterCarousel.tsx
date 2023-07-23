@@ -3,14 +3,13 @@ import Carousel from './Carousel'
 
 export default function BeforeAfterCarousel() {
   return (
-    <Carousel>
-      <div>
-        <ReactCompareSlider
-          itemOne={<ReactCompareSliderImage src="before1.jpg" alt="Before" />}
-          itemTwo={<ReactCompareSliderImage src="after1.jpg" alt="After" />}
+    <Carousel items={
+[
+        <ReactCompareSlider className='w-max-'
+          itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Before" />}
+          itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="After" />}
         />
-      </div>
-      {/* Add more slides as needed */}
-    </Carousel>
+ ]
+    } />
   );
 }
