@@ -24,10 +24,9 @@ export default function IndexPage() {
         {/*  service={<DetailingServices serviceType={'exterior'} />} />*/}
         {/*<ServiceCards image={'Interior.jpg'} service={<DetailingServices serviceType={'interior'} />} />*/}
         {/*<ServiceCards image={'Wax.jpg'} service={<DetailingServices serviceType={'miscellaneous'} />} />*/}
-        <ReactCompareSlider
-        itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image one" />}
-        itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image two" />}
-        />
+        <div style={{ width: '100%' }}>
+        <BeforeAfterCarousel />
+        </div>
       </Layout>
     </>
   )
