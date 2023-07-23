@@ -37,7 +37,6 @@ export default function Carousel() {
         <Card link={'#item1'} title={'Exterior'} />
         <Card link={'#item2'} title={'Interior'} />
         <Card link={'#item3'} title={'Misc'} />
-        {/*<Card link={'#item3'} title={'Misc'} />*/}
       </div>
     </div>
   )
