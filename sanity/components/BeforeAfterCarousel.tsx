@@ -3,7 +3,7 @@ import Carousel from './Carousel'
 
 export default function BeforeAfterCarousel() {
   return (
-    <Carousel className="w-full" items={
+    <Carousel items={
 [
         <ReactCompareSlider className='w-max-'
           itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Before" />}
