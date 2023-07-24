@@ -8,9 +8,12 @@ export default function Carousel({ items }) {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide % items.length) + 1)
+      console.log(`Switching to slide ${currentSlide}`);
     }, 3000)
     return () => clearInterval(timer)
   }, [])
+
+  console.log(`Rendering Carousel with ${items.length} items. Current slide is ${currentSlide}.`);
 
   return (
     <div className='carousel w-full'>
