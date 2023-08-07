@@ -1,0 +1,3 @@
+[submodule "SalesGPT"]
+	path = SalesGPT
+	url = git@github.com:ZackBradshaw/SalesGPT.git
