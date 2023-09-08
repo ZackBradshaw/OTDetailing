@@ -26,7 +26,7 @@ export default function IndexPage() {
 
   const handleNewUserMessage = (newMessage) => {
     // Now send the message throught the backend API
-    fetch('/api/chat', {
+    fetch('http://localhost:3002/api/chat', { // Update the URL to the correct endpoint
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
