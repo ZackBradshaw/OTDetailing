@@ -1,16 +1,11 @@
 // @ts-ignore
 import dynamic from 'next/dynamic';
+import { addResponseMessage } from 'react-chat-widget';
 import 'react-chat-widget/lib/styles.css';
 
-const Widget = dynamic(
-  () => import('react-chat-widget').then((mod) => mod.Widget),
-  { ssr: false }
-);
+const importWidget = () => import('react-chat-widget').then((mod) => mod.Widget as React.ComponentType);
+const Widget = dynamic(importWidget, { ssr: false });
 
-const addResponseMessage = dynamic(
-  () => import('react-chat-widget').then((mod) => mod.addResponseMessage),
-  { ssr: false }
-);
 import Layout from '../sanity/components/Layout'
 import Services from '../sanity/components/Services'
 import Carousel from '../sanity/components/Carousel'
@@ -18,9 +13,6 @@ import BookingComponent from '../sanity/components/BookingComponent'
 import ServiceCards from '../sanity/components/ServiceCards'
 import DetailingServices from '../sanity/components/DetailingServices'
 import { useEffect } from 'react'
-import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import dynamic from 'next/dynamic'
-import React from 'react'
 
 export default function IndexPage() {
   useEffect(() => {
@@ -58,6 +50,8 @@ export default function IndexPage() {
           handleNewUserMessage={handleNewUserMessage}
           title="Chat with our AI"
           subtitle=""
+          {...({} as any)}
+        />
         in the decription field fill in interior services
         <img src="Steps.png" />
         <ServiceCards
@@ -65,10 +59,9 @@ export default function IndexPage() {
           service={<DetailingServices serviceType={'exterior'} />} />
         <ServiceCards image={'Interior.jpg'} service={<DetailingServices serviceType={'interior'} />} />
         <ServiceCards image={'Wax.jpg'} service={<DetailingServices serviceType={'miscellaneous'} />} />
-        <ReactCompareSlider
-        itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image one" />}
-        itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image two" />}
-        />
+        {/* <ReactCompareSlider */}
+        {/* itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image one" />} */}
+        {/* itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image two" />} */}
       </Layout>
     </>
   )
