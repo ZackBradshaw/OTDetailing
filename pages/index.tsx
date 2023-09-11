@@ -1,7 +1,12 @@
 // @ts-ignore
 import dynamic from 'next/dynamic';
-import { addResponseMessage } from 'react-chat-widget';
 import 'react-chat-widget/lib/styles.css';
+
+// Conditionally import addResponseMessage only on the client side
+let addResponseMessage;
+if (typeof window !== 'undefined') {
+  addResponseMessage = require('react-chat-widget').addResponseMessage;
+}
 
 const importWidget = () => import('react-chat-widget').then((mod) => mod.Widget as React.ComponentType);
 const Widget = dynamic(importWidget, { ssr: false });
@@ -16,11 +21,13 @@ import { useEffect } from 'react'
 
 export default function IndexPage() {
   useEffect(() => {
-    addResponseMessage('What can we help you with?');
+    if (addResponseMessage) {
+      addResponseMessage('What can we help you with?');
+    }
   }, []);
 
   const handleNewUserMessage = (newMessage) => {
-    // Now send the message throught the backend API
+    // Now send the message through the backend API
     fetch('http://localhost:3002/api/chat', { // Update the URL to the correct endpoint
       method: 'POST',
       headers: {
@@ -30,7 +37,9 @@ export default function IndexPage() {
     })
       .then((response) => response.json())
       .then((data) => {
-        addResponseMessage(data.response);
+        if (addResponseMessage) {
+          addResponseMessage(data.response);
+        }
       });
   };
 
@@ -42,7 +51,6 @@ export default function IndexPage() {
           <Services />
           <BookingComponent />
         </div>
-        {/*in the decription field fill in interior services*/}
         <ServiceCards image={'https://images.unsplash.com/photo-1527581849771-416a9d62308e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'} service={<DetailingServices serviceType={'exterior'}/>}/>
         <ServiceCards image={'Interior.jpg'} service={<DetailingServices serviceType={'interior'}/>}/>
         <ServiceCards image={'Wax.jpg'} service={<DetailingServices serviceType={'miscellaneous'}/>}/>
@@ -52,17 +60,9 @@ export default function IndexPage() {
           subtitle=""
           {...({} as any)}
         />
-        in the decription field fill in interior services
         <img src="Steps.png" />
-        <ServiceCards
-          image={'https://images.unsplash.com/photo-1527581849771-416a9d62308e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'}
-          service={<DetailingServices serviceType={'exterior'} />} />
-        <ServiceCards image={'Interior.jpg'} service={<DetailingServices serviceType={'interior'} />} />
-        <ServiceCards image={'Wax.jpg'} service={<DetailingServices serviceType={'miscellaneous'} />} />
-        {/* <ReactCompareSlider */}
-        {/* itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image one" />} */}
-        {/* itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image two" />} */}
       </Layout>
     </>
   )
 }
+
