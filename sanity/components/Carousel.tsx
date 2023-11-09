@@ -16,9 +16,9 @@ export default function Carousel() {
         <Hero image={"/Wax.jpg"} descriptions={'Superior service at affordable price'} title={'Miscellaneous'} />
       </div>
       <div className="flex flex-col justify-center flex-start absolute bottom-[18%] z-10 w-full py-2 gap-3 lg:flex-row ">
-        <Card link={'#item1'} title={'Exterior'} />
-        <Card link={'#item2'} title={'Interior'} />
-        <Card link={'#item3'} title={'Misc'} />
+        {/* <Card link={'#item1'} title={'Exterior'} /> */}
+        {/* <Card link={'#item2'} title={'Interior'} /> */}
+        {/* <Card link={'#item3'} title={'Misc'} /> */}
       </div>
     </div>
 </div>
