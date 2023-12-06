@@ -10,7 +10,7 @@ export default function Carousel() {
       <Hero image={"https://images.unsplash.com/photo-1527581849771-416a9d62308e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"} descriptions={'Superior service at affordable price'} title={'Exterior'} />
     </div>
     <div id="item2" className="carousel-item w-full">
-      <Hero image={"/Interior.jpg"} descriptions={'Superior service at affordable price'} title={'Interior'} />
+      <Hero image={"/Interior.jpg"} descriptions={'Superior service at affordable price'} />
     </div>
     <div id="item3" className="carousel-item w-full">
         <Hero image={"/Wax.jpg"} descriptions={'Superior service at affordable price'} title={'Miscellaneous'} />
