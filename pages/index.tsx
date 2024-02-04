@@ -16,8 +16,17 @@ import Services from '../sanity/components/Services'
 import Carousel from '../sanity/components/Carousel'
 import BookingComponent from '../sanity/components/BookingComponent'
 import ServiceCards from '../sanity/components/ServiceCards'
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import DetailingServices from '../sanity/components/DetailingServices'
 import { useEffect } from 'react'
+
+const ImageComparison = dynamic(
+  () => import('react-compare-slider').then((mod) => ({
+    default: mod.ReactCompareSlider,
+    ReactCompareSliderImage: mod.ReactCompareSliderImage,
+  })),
+  { ssr: false }
+);
 
 export default function IndexPage() {
   useEffect(() => {
@@ -61,6 +70,10 @@ export default function IndexPage() {
           {...({} as any)}
         />
         {/* <img src="Steps.png" /> */}
+        <ReactCompareSlider
+          itemOne={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image one" />}
+          itemTwo={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image two" />}
+        />
       </Layout>
     </>
   )
