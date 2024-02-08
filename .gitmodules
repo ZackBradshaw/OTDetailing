@@ -1,3 +1,6 @@
 [submodule "SalesGPT"]
 	path = SalesGPT
 	url = git@github.com:ZackBradshaw/SalesGPT.git
+[submodule "open-saas"]
+	path = open-saas
+	url = git@github.com:ZackBradshaw/open-saas.git
