@@ -34,14 +34,9 @@ export default function Carousel() {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="carousel w-full ">
-        {carouselItems.map((item, index) => (
-          <div key={item.id} className={`carousel-item w-full ${index === activeItem ? 'block' : 'hidden'}`}>
-            <Hero image={item.image} descriptions={item.descriptions} title={item.title} />
-          </div>
-        ))}
-        <div className="flex flex-col justify-center flex-start absolute bottom-[18%] z-10 w-full py-2 gap-3 lg:flex-row ">
-          {/* Dynamically generate navigation cards if needed */}
+      <div className="carousel w-full">
+        <div id={`item${activeItem + 1}`} className="carousel-item w-full">
+          <Hero image={carouselItems[activeItem].image} descriptions={carouselItems[activeItem].descriptions} title={carouselItems[activeItem].title} />
         </div>
       </div>
     </div>
