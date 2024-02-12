@@ -1,6 +1,6 @@
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
-export const BeforeAfter = () => (
+const BeforeAfter = () => (
   <div className="carousel w-full">
     <div id="slide1" className="carousel-item relative w-full">
       <ReactCompareSlider
@@ -44,3 +44,5 @@ export const BeforeAfter = () => (
     </div>
   </div>
 );
+
+export default BeforeAfter
