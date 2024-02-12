@@ -34,7 +34,7 @@ export default function Carousel() {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="carousel w-full h-[80vh]">
+      <div className="carousel w-full ">
         {carouselItems.map((item, index) => (
           <div key={item.id} className={`carousel-item w-full ${index === activeItem ? 'block' : 'hidden'}`}>
             <Hero image={item.image} descriptions={item.descriptions} title={item.title} />
