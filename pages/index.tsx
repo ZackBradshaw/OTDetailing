@@ -10,37 +10,38 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import DetailingServices from '../sanity/components/DetailingServices'
 import { useEffect } from 'react'
 
-let addResponseMessage;
-if (typeof window !== 'undefined') {
-  addResponseMessage = require('react-chat-widget').addResponseMessage;
-}
+// let addResponseMessage;
+// if (typeof window !== 'undefined') {
+//   addResponseMessage = require('react-chat-widget').addResponseMessage;
+// }
 
-const importWidget = () => import('react-chat-widget').then((mod) => mod.Widget as React.ComponentType);
-const Widget = dynamic(importWidget, { ssr: false });
+// const importWidget = () => import('react-chat-widget').then((mod) => mod.Widget as React.ComponentType);
+// const Widget = dynamic(importWidget, { ssr: false });
 
-const handleNewUserMessage = (newMessage) => {
-  // Now send the message through the backend API
-  fetch('http://127.0.0.1:8000/chat', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ user_input: newMessage }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (addResponseMessage) {
-        addResponseMessage(data.response);
-      }
-    });
-};
+
+// const handleNewUserMessage = (newMessage) => {
+//   // Now send the message through the backend API
+//   fetch('http://127.0.0.1:8000/chat', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({ user_input: newMessage }),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       if (addResponseMessage) {
+//         addResponseMessage(data.response);
+//       }
+//     });
+// };
 
 export default function IndexPage() {
-  useEffect(() => {
-    if (addResponseMessage) {
-      addResponseMessage('What can we help you with?');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (addResponseMessage) {
+  //     addResponseMessage('What can we help you with?');
+  //   }
+  // }, []);
 
   return (
     <>
