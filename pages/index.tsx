@@ -9,7 +9,7 @@ import ServiceCards from '../sanity/components/ServiceCards'
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import DetailingServices from '../sanity/components/DetailingServices'
 import { useEffect } from 'react'
-import BeforeAfter from 'sanity/components/BeforeAfter';
+import BeforeAfter from '../sanity/components/BeforeAfter';
 
 // let addResponseMessage;
 // if (typeof window !== 'undefined') {
