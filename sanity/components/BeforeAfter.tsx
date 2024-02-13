@@ -39,7 +39,7 @@ const BeforeAfter = () => {
         <h2 className="text-2xl font-bold">Gallery</h2>
         <span>{isGalleryOpen ? '▲' : '▼'}</span>
       </div>
-      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 transition-all duration-500 ease-in-out ${isGalleryOpen ? 'max-h-screen' : 'max-h-0'}`}>
+      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 transition-opacity duration-500 ease-in-out ${isGalleryOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}>
         {loadedImages.map((image, index) => (
           <ReactCompareSlider
             key={index}
