@@ -46,8 +46,8 @@ const BeforeAfter = () => (
             itemTwo={<ReactCompareSliderImage src="7b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px"}} />}
           />
           <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="8a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px"}} />}
-            itemTwo={<ReactCompareSliderImage src="8b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px"}} />}
+            itemOne={<ReactCompareSliderImage src="12a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px"}} />}
+            itemTwo={<ReactCompareSliderImage src="12b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px"}} />}
           />
         </div>
       </div>
@@ -69,12 +69,13 @@ const BeforeAfter = () => (
       </div>
     </div>
     <div className="flex justify-center w-full py-2 gap-2">
-      <a href="#item1" className="btn btn-xs">1</a>
-      <a href="#item2" className="btn btn-xs">2</a>
-      <a href="#item3" className="btn btn-xs">2</a>
-      <a href="#item4" className="btn btn-xs">4</a> */}
+      <a href="#slide1" className="btn btn-xs">1</a>
+      <a href="#slide2" className="btn btn-xs">2</a>
+      <a href="#slide3" className="btn btn-xs">2</a>
+      <a href="#slide4" className="btn btn-xs">4</a>
     </div>
   </>
 );
 
 export default BeforeAfter
+

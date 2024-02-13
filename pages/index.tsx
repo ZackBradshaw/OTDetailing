@@ -10,6 +10,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import DetailingServices from '../sanity/components/DetailingServices'
 import { useEffect } from 'react'
 import BeforeAfter from '../sanity/components/BeforeAfter';
+import Hero from '../sanity/components/Hero';
 
 // let addResponseMessage;
 // if (typeof window !== 'undefined') {
@@ -46,7 +47,12 @@ export default function IndexPage() {
   return (
     <>
       <Layout>
-        <Carousel />
+        {/* <Carousel /> */}
+        <Hero 
+          image="https://images.unsplash.com/photo-1527581849771-416a9d62308e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          title="" 
+          descriptions=''
+         />
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
           <Services />
           <BookingComponent />
