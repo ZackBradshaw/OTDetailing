@@ -1,67 +1,53 @@
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const BeforeAfter = () => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [loadedImages, setLoadedImages] = useState([]);
+
+  const images = [
+    { srcOne: "trunk-after.jpg", srcTwo: "trunk-before.jpg" },
+    { srcOne: "1a.png", srcTwo: "1b.png" },
+    { srcOne: "2a.png", srcTwo: "2b.png" },
+    { srcOne: "3a.png", srcTwo: "3b.png" },
+    { srcOne: "4a.png", srcTwo: "4b.png" },
+    { srcOne: "5a.png", srcTwo: "5b.png" },
+    { srcOne: "6a.png", srcTwo: "6b.png" },
+    { srcOne: "7a.png", srcTwo: "7b.png" },
+    { srcOne: "12a.png", srcTwo: "12b.png" },
+    { srcOne: "9a.png", srcTwo: "9b.png" },
+    { srcOne: "10a.png", srcTwo: "10b.png" },
+    { srcOne: "11a.png", srcTwo: "11b.png" },
+  ];
+
+  useEffect(() => {
+    if (isGalleryOpen) {
+      const timer = setInterval(() => {
+        if (loadedImages.length < images.length) {
+          setLoadedImages(images.slice(0, loadedImages.length + 1));
+        }
+      }, 100);
+      return () => clearInterval(timer);
+    } else {
+      setLoadedImages([]);
+    }
+  }, [isGalleryOpen, images.length, loadedImages.length]);
 
   return (
     <div>
-      <div className="flex justify-between items-center bg-primary text-white p-4 cursor-pointer" onClick={() => setIsGalleryOpen(!isGalleryOpen)}>
+      <div className="flex justify-between items-center bg-primary text-white p-4 cursor-pointer min-w-screen-2xl " onClick={() => setIsGalleryOpen(!isGalleryOpen)}>
         <h2 className="text-2xl font-bold">Gallery</h2>
         <span>{isGalleryOpen ? '▲' : '▼'}</span>
       </div>
-      {isGalleryOpen && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 transition-all duration-500 ease-in-out ${isGalleryOpen ? 'max-h-screen' : 'max-h-0'}`}>
+        {loadedImages.map((image, index) => (
           <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="trunk-after.jpg" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="trunk-before.jpg" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
+            key={index}
+            itemOne={<ReactCompareSliderImage src={image.srcOne} alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
+            itemTwo={<ReactCompareSliderImage src={image.srcTwo} alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
           />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="1a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="1b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="2a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="2b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="3a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="3b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="4a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="4b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="5a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="5b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="6a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="6b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="7a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="7b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="12a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="12b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="9a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="9b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="10a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="10b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-          <ReactCompareSlider
-            itemOne={<ReactCompareSliderImage src="11a.png" alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src="11b.png" alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   );
 };
