@@ -29,7 +29,7 @@ export default function IndexPage() {
           height="250"
           frameborder="0" style="border:0"
           referrerpolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/MAP_MODE?key=${process.env.Google_API_KEY}&PARAMETERS`}
+          src={`https://www.google.com/maps/embed/v1/MAP_MODE?key=${process.env.GOOGLE_API_KEY}&PARAMETERS`}
           allowfullscreen>
         </iframe>
         <div className="relative w-full h-full">
