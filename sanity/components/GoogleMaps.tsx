@@ -1,7 +1,7 @@
 
         import React from 'react';
 
-        const GoogleMaps = () => {
+        const GoogleMap = () => {
           return (
             <div className="flex items-center">
               <iframe
@@ -23,4 +23,4 @@
           );
         };
 
-        export default GoogleMaps;
+        export default GoogleMap;
