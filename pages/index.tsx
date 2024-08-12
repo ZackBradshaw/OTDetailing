@@ -26,7 +26,6 @@ export default function IndexPage() {
           <Services />
           <BookingComponent />
         </div>
-        <BeforeAfter />
       </Layout>
     </>
   )

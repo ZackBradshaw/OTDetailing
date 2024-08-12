@@ -5,9 +5,9 @@ const Navbar = () => {
 <div className="flex justify-center w-full bg-base-100 text-primary"> 
   <div className="navbar max-w-screen-2xl bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-primary text-xl">OT Detailing</a>
+        <a href='/' className="btn btn-ghost normal-case text-primary text-xl">OT Detailing</a>
       </div> 
-          <li><a href='/gallery' className='p-3'>Gallery</a></li>   
+          <li><a href='/gallery' className='btn btn-ghost normal-case text-primary text-l'>Gallery</a></li>   
           <div className="dropdown dropdown-end flex-end"> 
           <div tabIndex={1} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">

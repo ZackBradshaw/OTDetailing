@@ -2,7 +2,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import { useState, useEffect } from 'react';
 
 const BeforeAfter = () => {
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(true);
   const [loadedImages, setLoadedImages] = useState([]);
 
   const images = [
