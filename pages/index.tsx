@@ -25,8 +25,8 @@ export default function IndexPage() {
           <GoogleMaps />
           <Services />
           <BookingComponent />
-          <BeforeAfter />
         </div>
+          <BeforeAfter />
       </Layout>
     </>
   )
