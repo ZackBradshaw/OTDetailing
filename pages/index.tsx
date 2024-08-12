@@ -10,7 +10,7 @@ import DetailingServices from '../sanity/components/DetailingServices'
 import { useEffect } from 'react'
 import BeforeAfter from '../sanity/components/BeforeAfter';
 import Hero from '../sanity/components/Hero';
-import GoogleMaps from 'sanity/components/GoogleMaps';
+import GoogleMaps from '../sanity/components/GoogleMaps';
 
 export default function IndexPage() {
   return (
