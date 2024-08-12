@@ -1,5 +1,4 @@
 import React from 'react';
-import { add } from '@dnd-kit/utilities'
 
 interface Service {
   name: string;
