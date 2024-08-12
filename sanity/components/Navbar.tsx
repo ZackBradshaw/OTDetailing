@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="flex-1">
         <a href='/' className="btn btn-ghost normal-case text-primary text-xl">OT Detailing</a>
       </div> 
-          <li><a href='/gallery' className='btn btn-ghost normal-case text-primary text-l'>Gallery</a></li>   
+          {/* <li><a href='/gallery' className='btn btn-ghost normal-case text-primary text-l'>Gallery</a></li>    */}
           <div className="dropdown dropdown-end flex-end"> 
           <div tabIndex={1} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
