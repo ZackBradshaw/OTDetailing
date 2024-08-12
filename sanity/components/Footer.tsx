@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='bg-neutral text-neutral-content mt-auto'>
-      <div className='container mx-auto px-4 py-8 flex flex-col justify-between items-center'>
+    <footer className='bottom-0 bg-neutral text-neutral-content mt-auto'>
+      <div className='container  mx-auto px-4 py-8 flex flex-row justify-between items-center'>
         <div className='mb-6 md:mb-0'>
           <svg width='50' height='50' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fillRule='evenodd'
                clipRule='evenodd' className='fill-current'>

@@ -25,6 +25,8 @@ const BeforeAfter = () => {
       const timer = setInterval(() => {
         if (loadedImages.length < images.length) {
           setLoadedImages(images.slice(0, loadedImages.length + 1));
+        } else {
+          clearInterval(timer);
         }
       }, 100);
       return () => clearInterval(timer);
@@ -34,22 +36,29 @@ const BeforeAfter = () => {
   }, [isGalleryOpen, images.length, loadedImages.length]);
 
   return (
-    <div>
-      <div className="flex justify-between items-center bg-primary text-white p-4 cursor-pointer min-w-screen-2xl " onClick={() => setIsGalleryOpen(!isGalleryOpen)}>
+    <div className="">
+      <div 
+        className="flex justify-between items-center bg-primary text-white p-4 cursor-pointer w-full" 
+        onClick={() => setIsGalleryOpen(!isGalleryOpen)}
+      >
         <h2 className="text-2xl font-bold">Gallery</h2>
         <span>{isGalleryOpen ? '▲' : '▼'}</span>
       </div>
-      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 transition-opacity duration-500 ease-in-out ${isGalleryOpen ? 'opacity-100 max-h-screen' : 'opacity-0 max-h-0'}`}>
-        {loadedImages.map((image, index) => (
-          <ReactCompareSlider
-            key={index}
-            itemOne={<ReactCompareSliderImage src={image.srcOne} alt="Image one" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-            itemTwo={<ReactCompareSliderImage src={image.srcTwo} alt="Image two" style={{ objectFit: 'cover', height: "300px", width: "300px" }} />}
-          />
-        ))}
+      <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isGalleryOpen ? 'max-h-full opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+          {loadedImages.map((image, index) => (
+            <div key={index} className="w-full aspect-square">
+              <ReactCompareSlider
+                itemOne={<ReactCompareSliderImage src={image.srcOne} alt="Image one" />}
+                itemTwo={<ReactCompareSliderImage src={image.srcTwo} alt="Image two" />}
+                style={{ height: '300px', width: '300px' }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default BeforeAfter
+export default BeforeAfter;
